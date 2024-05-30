@@ -1,0 +1,13 @@
+<section>
+    <div class="container">
+        <div class="container-img">
+            <img src="../../assets/logo-qr-generator.svg" />
+        </div>
+        <div class="container-form">
+            <form  id="form-selected" #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <input (focus)="inputSelected()" (blur)="inputUnselected()" id="input-url" placeholder="Enter an url" type="text" ngModel name="url">
+                <button type="submit">QR code</button>
+            </form>
+        </div>
+    </div>
+</section>

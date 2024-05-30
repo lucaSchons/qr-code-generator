@@ -1,0 +1,21 @@
+<section>
+    <div class="container-logo">
+        <img src="../../assets/logo-qr-generator.svg">
+    </div>
+    <div class="container-body">
+        @if (qrdata) {
+            <div class="container-qrcode">
+                <div class="qrcode-wrapper">
+                    <qrcode (qrCodeURL)="onChangeURL($event)" [qrdata]="qrdata" [width]="240">
+                    </qrcode>
+                </div>
+            </div>
+            <div class="container-buttons">
+                <a class="down" [href]="qrCodeDownloadLink" download="qrcode"><span>Download</span></a>
+                <a class="share" (click)="activeAlert()"><span>Share</span></a>
+            </div>
+        }@else{
+            <span>Carregamento falhou!</span>
+        }
+    </div>
+</section>

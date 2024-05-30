@@ -1,0 +1,79 @@
+section {
+    background: url(../../assets/bg-illustration.svg) no-repeat 90% 160%;
+    height: 80vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30vh;
+    gap: 35px;
+}
+
+.container-img {
+    display: flex;
+    justify-content: center;
+}
+
+.container-img img {
+    width: 200px;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.container-form form {
+    display: flex;
+    background-color: var(--bg-input);
+    border: 2px solid var(--blue);
+    border-radius: 20px;
+    justify-content: space-between;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+    padding-right: 6px;
+    width: 45%;
+}
+
+.container-form input {
+    display: flex;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    outline: none;
+    width: 70%;
+}
+
+.container-form button {
+    display: flex;
+    background-color: var(--blue);
+    border: none;
+    border-radius: 14px;
+    padding: 15px 35px;
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.container-form form.focused {
+    border-color: var(--white);
+}
+
+@media (max-width: 1080px) {
+    .container-form form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 640px) {
+    .container-form form {
+        width: 90%;
+    }
+
+    section {
+        background: url(../../assets/bg-illustration.svg) no-repeat 375% 150%;
+    }
+}
